@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial - Salas Chats</title>
+</head>
+<body>
+    <div id="content">
+        <form action="chat.html">
+            <div id="content-select-rooms">
+                <select name="select_room" id="qual-sala">
+                    <option value="0">Selecione a sala</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="python">Python</option>
+                </select>
+                <button id="btn-entrar-sala" type="submit">Entrar</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        document.getElementById('btn-entrar-sala').disabled = true
+        document.getElementById('qual-sala').addEventListener('click', (event) => {
+            const sala = document.getElementById('qual-sala').value
+            if(sala !== "0") {
+              document.getElementById('btn-entrar-sala').disabled = false
+            }else {
+                document.getElementById('btn-entrar-sala').disabled = true
+            }
+        })
+    </script>
+</body>
+</html>

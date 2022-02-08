@@ -1,0 +1,15 @@
+#content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#content-select-rooms {
+    display: flex;
+    flex-direction: column;
+}
+
+
+#btn-entrar-sala {
+    margin-top: 10px;
+}
