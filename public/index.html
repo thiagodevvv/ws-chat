@@ -11,6 +11,7 @@
     <div id="content">
         <form action="chat.html">
             <div id="content-select-rooms">
+                <input name="username" id="username" placeholder="Digite seu nome"/>
                 <select name="select_room" id="qual-sala">
                     <option value="0">Selecione a sala</option>
                     <option value="javascript">JavaScript</option>
@@ -23,8 +24,9 @@
     <script>
         document.getElementById('btn-entrar-sala').disabled = true
         document.getElementById('qual-sala').addEventListener('click', (event) => {
+            const username = document.getElementById('username').value
             const sala = document.getElementById('qual-sala').value
-            if(sala !== "0") {
+            if(sala !== "0" && username.length > 0) {
               document.getElementById('btn-entrar-sala').disabled = false
             }else {
                 document.getElementById('btn-entrar-sala').disabled = true

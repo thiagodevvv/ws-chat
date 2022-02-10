@@ -9,7 +9,23 @@
     flex-direction: column;
 }
 
+#username {
+    margin-bottom: 10px;
+}
 
 #btn-entrar-sala {
     margin-top: 10px;
+}
+
+#content-chat {
+    display: flex;
+    flex-direction: row;
+}
+#users-online {
+    flex-direction: column;
+    flex: 3
+}
+
+#chat {
+    flex: 1
 }
