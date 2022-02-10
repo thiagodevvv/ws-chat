@@ -4,10 +4,11 @@ io.on('connection', (socket) => {
     console.log('a user connect')
     socket.on('disconnect', () => console.log('user disconnected'))
     socket.on('select_room', msg => {
-        console.log('room:' + msg.room)
+        room = msg.room
+        socket.join(msg.room)
     })
-    socket.on('chat message', msg => {
-        console.log(`MSG: ${msg}`)
-        socket.emit('chat message', msg)
+    socket.on('chat message', data => {
+        io.to(data.room).emit('chat message', data.msg)
+        // socket.emit('chat message', msg)
     })
 })
