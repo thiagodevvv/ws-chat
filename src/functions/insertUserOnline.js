@@ -9,7 +9,7 @@ async function insertUserOnline (socket, data) {
     for (const socket of socketsOnline) {  
         usersOnline.push(socket.data.username)
     }
-    io.emit('user online', usersOnline)
+    io.to(data.room).emit('user online', usersOnline)
 }
 
 module.exports = {

@@ -9,7 +9,7 @@ async function removeUserRoom (socket) {
             usersOnline.push(socket.data.username)
               
     }
-    io.emit('user online', usersOnline)
+    io.to(room).emit('user online', usersOnline)
 }
 
 

@@ -2,7 +2,7 @@ Chatzin para treinar WebSockets usando a lib Socket.io
 
 
 Missoês
-
+[ ] - Ao entrar um usuario de outra sala, como python ele remove todos nomes da outra sala e acrescenta o usuario em todas salas
 [ ] - Possibilidade de enviar uma msg privada para qualquer usuario na listagem dos que estão online em determinada room
 
 
