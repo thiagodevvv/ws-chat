@@ -33,8 +33,13 @@ socket.on('chat message', msg => {
 })
 
 
-socket.on('user online', username => {
-    const li = document.createElement('li')
-    li.textContent = username
-    users.appendChild(li)
+socket.on('user online', usersOnline => {
+  console.log('chamou event user online')
+  console.log(usersOnline)
+    users.innerHTML = ""
+    usersOnline.map(user => {
+      const li = document.createElement('li')
+      li.textContent = user
+      users.appendChild(li)
+    }) 
 })
