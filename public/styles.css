@@ -23,9 +23,15 @@
 }
 #users-online {
     flex-direction: column;
-    flex: 3
 }
 
 #chat {
-    flex: 1
+    width: 100%;
 }
+
+#private-chat {
+    display: none;
+    flex-direction: column;
+}
+
+

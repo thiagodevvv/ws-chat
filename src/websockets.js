@@ -13,6 +13,9 @@ io.on('connection',  (socket) => {
         io.to(data.room).emit('chat message', data.msg)// io é pra quando queremos enviar global, nesse caso para todos da room.
     })
     socket.on('private message', msg => {
-        
+        socket.to(msg.to).emit('new_msg', {
+            msg: msg.msg,
+            from: socket.id
+        })
     })
 })

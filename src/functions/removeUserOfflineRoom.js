@@ -6,7 +6,10 @@ async function removeUserRoom (socket) {
     const socketsOnline = await io.in(room).fetchSockets()
     for (const socket of socketsOnline) {
         if(socket.connected)
-            usersOnline.push(socket.data.username)
+            usersOnline.push({
+                username: socket.data.username,
+                idSocket: socket.id
+            })
               
     }
     io.to(room).emit('user online', usersOnline)
